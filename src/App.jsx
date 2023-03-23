@@ -119,22 +119,27 @@ function App() {
   };
 
   return (
-    <div className="mt-20 mx-auto w-[1300px] gap-20 flex-col lg:flex lg:flex-row border-4 border-red-900">
-      <ProfileList
-        records={records}
-        onDelete={handleDelete}
-        onEdit={handleEdit}
-      />
-      <ProfileForm
-        handleSubmit={handleSubmit}
-        editRecords={editRecords}
-        handleChange={handleChange}
-        name={value.name}
-        email={value.email}
-        phone={value.phone}
-        profilePic={value.profilePic}
-        bio={value.bio}
-      />
+    <div className="mt-28 mx-auto max-w-screen-xl">
+      <h1 className="bg-blue-50 text-gray-500 font-semibold text-3xl p-2 mb-4">
+        React Crud Application
+      </h1>
+      <div className="gap-16 flex-col lg:flex lg:flex-row">
+        <ProfileList
+          records={records}
+          onDelete={handleDelete}
+          onEdit={handleEdit}
+        />
+        <ProfileForm
+          handleSubmit={handleSubmit}
+          editRecords={editRecords}
+          handleChange={handleChange}
+          name={value.name}
+          email={value.email}
+          phone={value.phone}
+          profilePic={value.profilePic}
+          bio={value.bio}
+        />
+      </div>
     </div>
   );
 }

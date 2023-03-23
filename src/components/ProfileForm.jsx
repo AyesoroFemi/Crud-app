@@ -12,7 +12,7 @@ function ProfileForm({
   handleChange,
 }) {
   return (
-    <form className="basis-1/3" onSubmit={handleSubmit}>
+    <form className="basis-1/3 bg-[#87A0CE] p-6" onSubmit={handleSubmit}>
       <InputForm
         name="name"
         type="text"
@@ -45,7 +45,7 @@ function ProfileForm({
       <div className="my-2">
         <label htmlFor="">Bio</label>
         <textarea
-          className="block w-full py-1 border-2 border-blue-900 rounded-sm"
+          className="block px-3 w-full py-1 outline-none rounded-sm"
           type="text"
           name="bio"
           value={bio}
@@ -54,7 +54,7 @@ function ProfileForm({
       </div>
       <button
         type="submit"
-        className="py-2 my-4 w-full text-center bg-blue-200 hover:bg-blue-700"
+        className="py-2 my-4 font-semibold w-full text-center bg-blue-200 hover:bg-blue-400"
       >
         {editRecords ? "Edit" : "Submit"}
       </button>
